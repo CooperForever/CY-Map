@@ -1,0 +1,412 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.logo {
+	position: absolute;
+	width: 100px;
+	left: 50px;
+	bottom: 20px;
+	z-index: 999;
+}
+
+#map {
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+.map {
+	height: 100%;
+	width: 100%;
+}
+
+/**信息框**/
+.popover-content {
+	min-width: 180px;
+}
+
+#tooltipinfo {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	z-index: 100;
+}
+
+.tooltip.in {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.tooltip.top .tooltip-arrow {
+	border-top-color: white;
+}
+
+.tooltip-inner {
+	border: 2px solid white;
+}
+
+/*zoombar 样式设计  */
+#map .ol-zoom .ol-zoom-out {
+	margin-top: 204px;
+}
+
+#map .ol-zoomslider {
+	background-color: transparent;
+	top: 2.3em;
+}
+
+#map .ol-touch .ol-zoom .ol-zoom-out {
+	margin-top: 212px;
+}
+
+#map .ol-touch .ol-zoomslider {
+	top: 2.75em;
+}
+
+#map .ol-zoom-in.ol-has-tooltip:hover [role=tooltip],
+#map .ol-zoom-in.ol-has-tooltip:focus [role=tooltip] {
+	top: 3px;
+}
+
+#map .ol-zoom-out.ol-has-tooltip:hover [role=tooltip],
+#map .ol-zoom-out.ol-has-tooltip:focus [role=tooltip] {
+	top: 232px;
+}
+
+.h2-title {
+	height: 25px;
+}
+
+/*popup window*/
+.ol-popup {
+	position: absolute;
+	background-color: white;
+	-webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+	filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+	padding: 0px;
+	border-radius: 5px;
+	bottom: 12px;
+	left: -50px;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.ol-popup:after {
+	border-top-color: white;
+	border-width: 10px;
+	left: 48px;
+	margin-left: -10px;
+}
+
+.ol-popup:before {
+	border-top-color: #cccccc;
+	border-width: 11px;
+	left: 48px;
+	margin-left: -11px;
+}
+
+.popup-content {
+	margin-top: 20px;
+	padding: 3px;
+	line-height: 15px;
+}
+
+.ol-popup-closer {
+	text-decoration: none;
+	position: absolute;
+	top: 0px;
+	right: 8px;
+	margin-top: 4px;
+	color: white;
+}
+
+.popup-title {
+
+	position: absolute;
+	padding-top: 5px;
+	top: 0px;
+	height: 18px;
+	width: 100%;
+	background-color: #088ef0;
+	border-bottom: 1px solid #ebebeb;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.ol-popup-closer:after {
+	content: "✖";
+}
+
+/*****************************
+*overview map
+**/
+.ol-custom-overviewmap,
+.ol-custom-overviewmap.ol-uncollapsible {
+	border: 0px solid rgb(123, 152, 188);
+	bottom: 0px;
+	left: 0px;
+	right: auto;
+	top: auto;
+	border-radius: 0px;
+	padding: 0px;
+	margin: 0px;
+	line-height: normal;
+}
+
+.ol-custom-overviewmap:not(.ol-collapsed) {
+	border: 1px solid rgb(123, 152, 188);
+	background: rgba(255, 255, 255, 1);
+	padding: 0px;
+	margin: 0px;
+}
+
+.ol-custom-overviewmap .ol-overviewmap-map {
+	line-height: normal;
+	border: none;
+	width: 200px;
+	margin: 2px 2px 0px 2px;
+	padding: 0px;
+}
+
+.ol-custom-overviewmap:not(.ol-collapsed) .ol-overviewmap-map {
+	border: 1px solid rgb(204, 204, 204);
+	line-height: normal;
+}
+
+.ol-custom-overviewmap .ol-overviewmap-box {
+	line-height: normal;
+	border: 1px solid red;
+	background: rgba(255, 0, 0, .2);
+}
+
+.ol-overviewmap-button {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	bottom: 2px;
+	left: 2px;
+	background: url("images/maptool/ovOpen.png");
+}
+
+.ol-custom-overviewmap:not(.ol-collapsed) .ol-overviewmap-button {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	bottom: 2px;
+	left: 2px;
+	background: url("images/maptool/ovClose.png");
+}
+
+/****************************************************/
+.custom-mouse-position {
+	border: 1px solid #FFFFFF;
+	background-color: rgba(0, 60, 136, .5);
+	color: white;
+	border-radius: 2px;
+	bottom: 10px;
+	right: 50px;
+	padding: 2px;
+	position: absolute;
+}
+
+/*****************************************************/
+.rotate-north {
+	top: 265px;
+	left: 7px;
+}
+
+.ol-touch .rotate-north {
+	top: 80px;
+}
+
+/****************************************************/
+.ol-toc {
+	bottom: auto;
+	left: auto;
+	right: 0;
+	top: 2px;
+	border-radius: 0 0 0 0;
+	border: 1px solid #7b98bc;
+	background: rgba(255, 255, 255, 1);
+	padding: 2px 2px 2px 2px;
+	margin: 0px;
+}
+
+.ol-toc:hover {
+	background: rgba(255, 255, 255, 1)
+}
+
+
+
+.ol-toc div:not(.ol-toc-map) {
+	display: inline-block;
+}
+
+.ol-toc-toggle {
+	cursor: pointer;
+	height: 100%;
+	border-radius: 5px 0px 0px 5px;
+	background: rgba(255, 255, 255, 1)
+}
+
+.ol-toc-toggle:hover {
+	background-color: #7b98bc;
+}
+
+.ol-toc:not(.ol-toc-collapsed)>div:not(.ol-toc-map) {
+	border: 1px solid #7b98bc;
+	position: absolute;
+	width: 10px;
+	top: -1px;
+	left: -10px;
+	height: 40px;
+}
+
+.ol-toc-collapsed {
+	width: 10px;
+	height: 40px;
+	padding: 0px;
+	border-radius: 5px 0 0 5px;
+}
+
+.ol-toc-collapsed:hover {
+	background-color: #7b98bc;
+}
+
+.ol-toc-toggle span {
+	height: 100%
+}
+
+.ol-toc .ol-toc-map {
+	border: 1px solid #7b98bc;
+	background: #f0f6e4;
+	/*height: 200px;*/
+	min-height: 200px;
+	max-height: 600px;
+	margin: 0px;
+	width: 180px;
+	overflow-y: auto;
+	overflow-x: auto;
+}
+
+.ol-toc:not (.ol-toc-collapsed) div:not(.ol-toc-map) {
+	bottom: 1px;
+	left: 2px;
+	position: absolute
+}
+
+.ol-toc.ol-toc-collapsed .ol-toc-map,
+.ol-toc.ol-toc-uncollapsible div:not(.ol-toc-map) {
+	display: none
+}
+
+.ol-toc:not (.ol-toc-collapsed) {
+	background: rgba(255, 255, 255, 1);
+}
+
+/**************************************************/
+.tooltip {
+	white-space: nowrap;
+	border: #000000;
+}
+
+.ol-quick-tool {
+	position: absolute;
+
+	width: 100%;
+	padding-bottom: 2px;
+	bottom: 5px;
+
+	text-align: center;
+}
+
+.ol-quick-tool-item {
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: bottom;
+	margin: 0 1px 0 1px;
+	background-size: cover;
+	width: 32px;
+	height: 32px;
+}
+
+.ol-dragbox-custom {
+	background-color: rgba(255, 0, 0, 0.3);
+	border-color: rgba(0, 255, 255, 1);
+}
+
+/**测量**/
+.quicktool-tooltip {
+	position: relative;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 4px;
+	color: white;
+	padding: 4px 8px;
+	opacity: 0.7;
+	white-space: nowrap;
+}
+
+.quicktool-tooltip-measure {
+	opacity: 1;
+	font-weight: bold;
+}
+
+.quicktool-tooltip-static {
+	background-color: #ffcc33;
+	color: black;
+	border: 1px solid white;
+}
+
+.quicktool-tooltip-measure:before,
+.quicktool-tooltip-static:before {
+	border-top: 6px solid rgba(0, 0, 0, 0.5);
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+	content: "";
+	position: absolute;
+	bottom: -6px;
+	margin-left: -7px;
+	left: 50%;
+}
+
+.quicktool-tooltip-static:before {
+	border-top-color: #ffcc33;
+}
+
+/**比例尺样式**/
+.ol-scale-line-custom {
+	left: 220px;
+	bottom: 0px;
+}
+
+/*********************************DrawPanel*****************************************/
+.ol-custom-drawpanel,
+.ol-custom-drawpanel.ol-uncollapsible {
+	border: 0px solid rgb(123, 152, 188);
+	bottom: auto;
+	top: 0;
+	left: 100px;
+	border-radius: 0px;
+	padding: 0px;
+	text-align: center;
+	margin: 0 auto;
+	line-height: normal;
+}

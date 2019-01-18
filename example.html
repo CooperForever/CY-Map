@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<head>
+  <link rel="stylesheet" href="./plugins/ol316/ol.css" type="text/css">
+  <link rel="stylesheet" href="./plugins/ztree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+  <link rel="stylesheet" href="./plugins/jquery-easyui-1.5.2/themes/bootstrap/easyui.css" type="text/css">
+  <link rel="stylesheet" href="themes/default/main.css" type="text/css">
+  <style>
+    .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  <script src="./plugins/jquery/jquery.min.js"></script>
+  <script src="./plugins/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+  <script src="./plugins/ztree/v3/js/jquery.ztree.all.min.js"></script>
+  <script src="./plugins/ol316/ol-debug.js"></script>
+  <script src="./plugins/ol316/p-ol3.debug.js"></script>
+  <script src="./MapConfig.js"></script>
+  <script src="./plugins/extensions/DrawPanelControl.js"></script>
+  <script src="./plugins/extensions/OverviewMapControl.js"></script>
+  <script src="./plugins/extensions/QuickToolControl.js"></script>
+  <script src="./plugins/extensions/RotateNorthControl.js"></script>
+  <script src="./plugins/extensions/TocControl.js"></script>
+  <script src="./plugins/extensions/CYMapSDK-0.0.1_src.js"></script>
+  <title>OpenLayer example</title>
+</head>
+
+<body>
+  <div id="map" class="map">
+    <img src="themes/default/images/maptool/LOGO.png" class="logo">
+  </div>
+</body>
+<script type="text/javascript">
+  CYMap.init(config);
+  CYMap.addTocControl("tocControl01", "layerTree01", "ol-toc", CYMap.getLayerConf(), false, true);
+  CYMap.addZoomSliderControl("zoomslider01", "ol-zoomslider");
+  CYMap.addZoomControl("zoom01", "ol-zoom");
+  CYMap.addMousePositionControl("mouseposition01", null);
+  CYMap.addQuickToolControl("quickTool01", "ol-quick-tool");
+</script>
+
+</html>
