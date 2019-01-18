@@ -5,7 +5,7 @@
 
 # 预览
 
-[CY MAP](https://www.baidu.com/)
+[CY MAP](https://cooperforever.github.io/CY-Map/example.html)
 
 # API
 
